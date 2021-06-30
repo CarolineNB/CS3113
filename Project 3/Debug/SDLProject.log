@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 3\main.cpp(120,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 3\main.cpp(129,18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 3\main.cpp(138,20): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 3\main.cpp(230,23): warning C4018: '<': signed/unsigned mismatch
+  SDLProject.vcxproj -> C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 3\Debug\SDLProject.exe
