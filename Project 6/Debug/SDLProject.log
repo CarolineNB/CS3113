@@ -1,0 +1,18 @@
+﻿  Entity.cpp
+  Level1.cpp
+  Level2.cpp
+  Level3.cpp
+  main.cpp
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 6\main.cpp(43,38): warning C4566: character represented by universal-character-name '\u266A' cannot be represented in the current code page (1252)
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 6\main.cpp(43,38): warning C4566: character represented by universal-character-name '\u266B' cannot be represented in the current code page (1252)
+  GameStart.cpp
+  Map.cpp
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 6\Map.cpp(72,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 6\Map.cpp(73,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Scene.cpp
+  ShaderProgram.cpp
+  Util.cpp
+C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 6\Util.cpp(31,20): warning C4018: '<': signed/unsigned mismatch
+  End.cpp
+  Generating Code...
+  SDLProject.vcxproj -> C:\Users\Caroline\OneDrive\Desktop\CS3113\CS3113\Project 6\Debug\SDLProject.exe
