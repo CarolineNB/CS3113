@@ -31,7 +31,7 @@ Scene* currentScene;
 Scene* sceneList[6];
 
 Mix_Music* music;
-Mix_Chunk* jump;
+Mix_Chunk* walk;
 
 void SwitchToScene(Scene* scene) {
     currentScene = scene;
@@ -40,7 +40,7 @@ void SwitchToScene(Scene* scene) {
 
 void Initialize() {
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
-    displayWindow = SDL_CreateWindow("WHALE BEATS! ♪ ♫ ♪", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
+    displayWindow = SDL_CreateWindow("Oceans Rising", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
     SDL_GLContext context = SDL_GL_CreateContext(displayWindow);
     SDL_GL_MakeCurrent(displayWindow, context);
 
@@ -56,7 +56,7 @@ void Initialize() {
     music = Mix_LoadMUS("music.wav");
     Mix_PlayMusic(music, -1);
     Mix_VolumeMusic(MIX_MAX_VOLUME/2);
-
+    walk = Mix_LoadWAV("walk.wav");
     viewMatrix = glm::mat4(1.0f);
     modelMatrix = glm::mat4(1.0f);
     projectionMatrix = glm::ortho(-5.0f, 5.0f, -3.75f, 3.75f, -1.0f, 1.0f);
@@ -120,18 +120,22 @@ void ProcessInput() {
     if (keys[SDL_SCANCODE_LEFT]) {
         currentScene->state.player->movement.x = -1.0f;
         currentScene->state.player->movement.y = 0.0f;
+        Mix_PlayChannel(-1, walk, 0);
     }
     else if (keys[SDL_SCANCODE_RIGHT]) {
         currentScene->state.player->movement.x = 1.0f;
         currentScene->state.player->movement.y = 0.0f;
+        Mix_PlayChannel(-1, walk, 0);
     }
     else if (keys[SDL_SCANCODE_UP]) {
         currentScene->state.player->movement.y = 1.0f;
         currentScene->state.player->movement.x = 0.0f;
+        Mix_PlayChannel(-1, walk, 0);
     }
     else if (keys[SDL_SCANCODE_DOWN]) {
         currentScene->state.player->movement.y = -1.0f;
         currentScene->state.player->movement.x = 0.0f;
+        Mix_PlayChannel(-1, walk, 0);
     }
     if (glm::length(currentScene->state.player->movement) > 1.0f) {
         currentScene->state.player->movement = glm::normalize(currentScene->state.player->movement);
